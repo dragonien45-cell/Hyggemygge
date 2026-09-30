@@ -1,0 +1,20 @@
+{
+  "name": "Hyggemygge Ubuntu Chromium Desktop",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "overrideCommand": false,
+  "remoteUser": "root",
+  "postCreateCommand": "chromium-browser --version",
+  "postStartCommand": "bash .devcontainer/start-desktop.sh",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Ubuntu desktop med Chromium og lyd",
+      "onAutoForward": "openBrowser",
+      "protocol": "http",
+      "visibility": "private"
+    }
+  }
+}

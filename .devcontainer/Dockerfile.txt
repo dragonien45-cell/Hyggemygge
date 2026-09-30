@@ -1,0 +1,10 @@
+FROM lscr.io/linuxserver/webtop:ubuntu-xfce
+
+ENV TITLE="Hyggemygge Chromium Desktop" \
+    TZ=Europe/Copenhagen \
+    DISABLE_IPV6=true \
+    WLR_NO_HARDWARE_CURSORS=1 \
+    SELKIES_AUDIO_ENABLED=true \
+    SELKIES_AUDIO_DEVICE_NAME=output.monitor
+
+EXPOSE 3000
